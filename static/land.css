@@ -1,0 +1,52 @@
+body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f4;
+}
+    
+.front-page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+}
+    
+.main-title {
+        font-size: 3em;
+        margin-bottom: 20px;
+        text-align: center;
+        color: #333;
+}
+    
+.continue-button {
+        padding: 10px 20px;
+        font-size: 1.2em;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+}
+    
+.continue-button:hover {
+        background-color: #45a049;
+}
+    
+.slogan {
+        text-align: center;
+        color: white;
+        margin-top: 20px;
+}
+    
+footer {
+        background-color: #333; 
+        color: #fff; 
+        padding: 10px; 
+        text-align: center; 
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+}
+    

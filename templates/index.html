@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sugarcane Disease Prediction</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='/static/styles.css'>
+</head>
+
+<body>
+    <h1>Sugarcane Disease Prediction</h1>
+    <form id="predictionForm" action="/predict" method="post" enctype="multipart/form-data">
+        <div>
+            <input type="file" id="file-input" name="file" accept=".jpg, .jpeg, .png">
+        </div>
+        <button type="submit">Predict</button>
+    </form>
+    {% if prediction %}
+        <p>{{ prediction }}</p>
+        {% if prediction != 'Invalid file format or no file provided.' %}
+            <img src="static/uploads/uploaded_image.jpg" alt="Uploaded Image" class="one-third">
+        {% endif %}
+        {% if prevention %}
+            <h3>Prevention:</h3>
+            <ul>
+                {% for point in prevention.split('\n') %}
+                    <li>{{ point }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endif %}
+    <footer>
+        &copy; 2024 All rights reserved. | <a href="https://github.com/chyash1110/sugarcanedisease" target="_blank">Source Code</a>
+    </footer>
+</body>
+
+</html>
